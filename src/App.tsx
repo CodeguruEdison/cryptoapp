@@ -13,21 +13,11 @@ const App =()=>{
          <Layout>
             <div className="routes">
               <Routes>
-                  <Route  path ="/">
-                      <HomePage/>
-                  </Route>
-                  <Route  path ="/exchanges">
-                      <Exchanges/>
-                  </Route>
-                  <Route  path ="/cryptocurrencies">
-                      <CryptoCurrencies/>
-                  </Route>
-                  <Route  path ="/crypto/:coinid">
-                      <CryptoDetail/>
-                  </Route>
-                  <Route  path ="/news">
-                      <News/>
-                  </Route>
+                  <Route   path ="/" element={<HomePage/>}/>
+                  <Route  path ="/exchanges" element={<Exchanges/>}/>
+                  <Route  path ="/cryptocurrencies" element={ <CryptoCurrencies/>}/>
+                  <Route  path ="/crypto/:coinid"  element={ <CryptoDetail/>}/>
+                  <Route  path ="/news"  element={ <News/>}/>
               </Routes>
             </div>
          </Layout>
