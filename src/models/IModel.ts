@@ -96,3 +96,18 @@ export interface Stats {
   totalMarketCap: number;
   total24hVolume: number;
 }
+
+export interface ICryptoNews {
+  url: string;
+  name: string;
+  image?: {
+    thumbnail?: {
+      contentUrl: string;
+    };
+  };
+  description: string;
+  provider: ICryptoNewsProvider[];
+  datePublished: Date;
+}
+export interface ICryptoNewsProvider
+  extends Pick<ICryptoNews, "image" | "name"> {}
